@@ -16,9 +16,11 @@ requirements:
         - python
         - gcc [not osx]
         - llvm [osx]
+        - tbb
     run:
         - libgcc [not osx]
         - python
+        - tbb
 
 
 test:
