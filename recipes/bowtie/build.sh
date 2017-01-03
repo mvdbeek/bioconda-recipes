@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+export CPPFLAGS="-I${PREFIX}/include"
+export LDFLAGS="-L${PREFIX}/lib -ltbb"
 make && make install prefix=$PREFIX
 
 PY3_BUILD="${PY_VER%.*}"
