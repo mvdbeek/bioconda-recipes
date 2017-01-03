@@ -22,10 +22,12 @@ requirements:
   build:
     - gcc   # [linux]
     - python
+    - tbb
   run:
     - python
     - perl-threaded
     - libgcc    # [linux]
+    - tbb
 
 test:
   commands:
