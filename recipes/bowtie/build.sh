@@ -3,6 +3,9 @@
 
 export CPPFLAGS="-I${PREFIX}/include"
 export LDFLAGS="-L${PREFIX}/lib -ltbb"
+export LIBRARY_PATH="${PREFIX}/lib"
+export LD_LIBRARY_PATH="${PREFIX}/lib"
+export CPATH="${PREFIX}/include"
 make && make install prefix=$PREFIX
 
 PY3_BUILD="${PY_VER%.*}"
