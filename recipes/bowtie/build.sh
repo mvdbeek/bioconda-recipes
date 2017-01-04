@@ -1,10 +1,10 @@
 #!/bin/bash
 
-
-export CPPFLAGS="-I${PREFIX}/include"
-export LDFLAGS="-rpath ${PREFIX}/lib"
-export LIBRARY_PATH="${PREFIX}/lib"
-export CPATH="${PREFIX}/include"
+if [ $(uname) == Darwin ] ; then
+    export LDFLAGS="-rpath ${PREFIX}/lib,-headerpad_max_install_names"
+    export LIBRARY_PATH="${PREFIX}/lib"
+    export CPATH="${PREFIX}/include"
+fi
 make && make install prefix=$PREFIX
 
 PY3_BUILD="${PY_VER%.*}"
