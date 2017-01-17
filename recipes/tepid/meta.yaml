@@ -4,8 +4,8 @@ about:
   summary: 'TEPID uses paired-end illumina sequencing reads to identify novel TE variants.'
 
 build:
-  number: 0
-  skip: True # [not py27 or not linux]
+  number: 1
+  skip: True # [not py27]
 
 package:
   name: tepid

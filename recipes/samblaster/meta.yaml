@@ -1,6 +1,5 @@
 build:
-  number: 0
-  skip: True # [osx]
+  number: 1
 
 # Started based on: https://anaconda.org/Judowill/samblaster
 
@@ -14,9 +13,10 @@ source:
 
 requirements:
   build:
-    - gcc
+    - gcc   # [not osx]
+    - llvm  # [not linux]
   run:
-    - libgcc
+    - libgcc  # [not osx]
 
 test:
     commands:
